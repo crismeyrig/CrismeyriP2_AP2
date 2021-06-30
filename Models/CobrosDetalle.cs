@@ -16,6 +16,6 @@ namespace CrismeyriP2_AP2.Models
             public virtual Ventas Venta { get; set; }
             public double Cobrado { get; set; }
 
-        }
+        
     }
 }
