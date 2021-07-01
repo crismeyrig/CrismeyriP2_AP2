@@ -2,6 +2,11 @@
 
 @inject IToastService toast
 
+@inject NavigationManager Nav
+@inject IJSRuntime Confirmacion
+
+
+
 <div class="card-img">
     <div class="card-header">
         <h1>Consulta de Cobros</h1>
@@ -72,8 +77,10 @@
                                 <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
                                 <td>@item.ClienteId</td>
                                 <td>@item.TotalCobrado</td>
-                                <td><a href="@($"Cobros/{item.CobroId}")">Ver cobro</a></td>
-
+                                @*<td><a href="@($"Cobros/{item.CobroId}")">Ver cobro</a></td>*@
+                            <td>
+                                <a type="button" href="@($"Cobros/{item.CobroId}")" class="btn btn-warning oi oi-pencil"></a>
+                            </td>
 
 
                             </tr>
